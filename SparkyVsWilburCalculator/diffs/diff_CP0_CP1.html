@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- This file was created with the aha Ansi HTML Adapter. http://ziz.delphigl.com/tool_aha.php -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8" />
+<title>diff_CP0_CP1</title>
+</head>
+<body>
+<pre>
+/**                                                                             /**
+ * SparkyVsWilbur.js                                                             * SparkyVsWilbur.js
+ */                                                                              */
+                                                                                 
+&quot;use strict&quot;                                                                    &quot;use strict&quot;
+
+var sparkyAnnualSavings         = 0;                                            var sparkyAnnualSavings         = 0;
+var sparkyInterestRate          = 0;                                            var sparkyInterestRate          = 0;
+var sparkyCompoundingYears      = 0;                                            var sparkyCompoundingYears      = 0;
+var sparkyStartYear             = 0;                                            var sparkyStartYear             = 0;
+var sparkyStopYear                      = 0;                                    var sparkyStopYear                      = 0;
+
+var wilburAnnualSavings         = 0;                                            var wilburAnnualSavings         = 0;
+var wilburInterestRate          = 0;                                            var wilburInterestRate          = 0;
+var wilburCompoundingYears      = 0;                                            var wilburCompoundingYears      = 0;
+var wilburStartYear             = 0;                                            var wilburStartYear             = 0;
+var wilburStopYear                      = 0;                                    var wilburStopYear                      = 0;
+
+var sparkyResultsTable;                                                         var sparkyResultsTable;
+var yearResultsTable;                                                           var yearResultsTable;  
+var wilburResultsTable;                                                         var wilburResultsTable;
+
+function initialize() {                                                         function initialize() {
+        alert(&quot;In initialize(): Web App Loaded!&quot;);                                      alert(&quot;In initialize(): Web App Loaded!&quot;);
+<span style="color:green;">                                                                              &gt;         sparkyResultsTable=document.getElementById('sparkyResultsTableId');</span>
+<span style="color:green;">                                                                              &gt;         yearResultsTable  =document.getElementById('yearResultsTableId');</span>
+<span style="color:green;">                                                                              &gt;         wilburResultsTable=document.getElementById('wilburResultsTableId');</span>
+<span style="color:green;">                                                                              &gt;</span>
+<span style="color:green;">                                                                              &gt;         console.log(sparkyResultsTable);</span>
+}                                                                               }
+
+function clearInputs(form) {                                                    function clearInputs(form) {
+<span style="color:teal;">        alert(&quot;function clearInputs() is running&quot;);                           |         var formElements = form.elements;</span>
+<span style="color:teal;">        console.log(form);                                                    |         for (var i=0; i&lt; formElements.length; i++)</span>
+<span style="color:green;">                                                                              &gt;                 formElements[i].value=&quot;&quot;;</span>
+}                                                                               }
+
+function loadDefaults(form) {                                                   function loadDefaults(form) {
+<span style="color:teal;">        alert(&quot;function loadDefaults() is running&quot;);                          |         form.reset();</span>
+<span style="color:red;">        console.log(form);                                                    &lt;</span>
+}                                                                               }
+
+function runComparison(form) {                                                  function runComparison(form) {
+        alert(&quot;function runComparison() is running&quot;);                                   alert(&quot;function runComparison() is running&quot;);
+        console.log(form);                                                              console.log(form);
+}                                                                               }
+</pre>
+</body>
+</html>

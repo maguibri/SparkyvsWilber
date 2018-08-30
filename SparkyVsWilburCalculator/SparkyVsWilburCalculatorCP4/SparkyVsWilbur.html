@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sparky vs. Wilbur</title>
+	<link rel="stylesheet" type="text/css" href="./SparkyVsWilbur.css"></style>
+
+</head>
+<body onload="initialize()">
+
+	<h1 class="center">Compare Investment Strategies</h1>
+	<hr>
+	<form id="inputForm">
+		<table id="inputTable" class="center">
+			<tr>
+				<td>
+					<input 	id="sparkyAnnualSavingsId" type="number" 
+							value="5000" min="0" max="999999" step="any"
+							placeholder="dollars" required>
+				</td>
+				<td>
+					<input 	id="sparkyInterestRateId" type="number"
+							value="0.10" min="0.0" max="1.0" step="0.01"
+							placeholder="decimal" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyCompoundingYearsId" type="number" 
+							value="45" min="1" max="99" step="1"
+							placeholder="years" required>
+				</td>
+				<td>
+					<input 	id="sparkyStartYearId" type="number" 
+							value="1" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyStopYearId" type="number" 
+							value="10" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+				<td>
+					<input 	id="sparkyStopYearId" type="number" 
+							value="10" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id = "clearButton" type="button" onClick="clearInputs(this.form)">
+						Clear
+					</button>
+					<button id = "defaultButton" type="button" onClick="loadDefaults(this.form)"> 
+						Defaults
+					</button>
+				</td>
+				<td>
+					<button id = "makeMeRichButton" type="button" onClick="runComparison(this.form)">
+						Make Me Rich
+					</button>
+				</td>
+			</tr>
+		</table>
+
+	</form>
+
+	<hr>
+
+	<div id="results" class="center">
+		<table id="sparkyResultsTableId" class="resultsTable">
+			<tr><th>Invest</th><th>Interest</th><th>Balance</th></tr>
+		</table>
+
+		<table id="yearResultsTableId" class="resultsTable">
+			<tr><th>YR</th></tr>
+		</table>	
+
+		<table id="wilburResultsTableId" class="resultsTable">
+			<tr><th>Invest</th><th>Interest</th><th>Balance</th></tr>
+		</table>
+	</div>
+
+	<script type="text/javascript" src="./FormattingToolsLibrary.js"></script>
+
+	<script type="text/javascript" src="./SparkyVsWilbur.js"></script>
+</body>
+</html>

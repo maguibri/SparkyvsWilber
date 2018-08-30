@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- This file was created with the aha Ansi HTML Adapter. http://ziz.delphigl.com/tool_aha.php -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8" />
+<title>diff_CP1_CP2</title>
+</head>
+<body>
+<pre>
+/**                                                                             /**
+ * SparkyVsWilbur.js                                                             * SparkyVsWilbur.js
+ */                                                                              */
+                                                                                 
+&quot;use strict&quot;                                                                    &quot;use strict&quot;
+
+var sparkyAnnualSavings         = 0;                                            var sparkyAnnualSavings         = 0;
+var sparkyInterestRate          = 0;                                            var sparkyInterestRate          = 0;
+var sparkyCompoundingYears      = 0;                                            var sparkyCompoundingYears      = 0;
+var sparkyStartYear             = 0;                                            var sparkyStartYear             = 0;
+var sparkyStopYear                      = 0;                                    var sparkyStopYear                      = 0;
+
+var wilburAnnualSavings         = 0;                                            var wilburAnnualSavings         = 0;
+var wilburInterestRate          = 0;                                            var wilburInterestRate          = 0;
+var wilburCompoundingYears      = 0;                                            var wilburCompoundingYears      = 0;
+var wilburStartYear             = 0;                                            var wilburStartYear             = 0;
+var wilburStopYear                      = 0;                                    var wilburStopYear                      = 0;
+
+var sparkyResultsTable;                                                         var sparkyResultsTable;
+var yearResultsTable;                                                           var yearResultsTable;  
+var wilburResultsTable;                                                         var wilburResultsTable;
+
+function initialize() {                                                         function initialize() {
+        alert(&quot;In initialize(): Web App Loaded!&quot;);                                      alert(&quot;In initialize(): Web App Loaded!&quot;);
+        sparkyResultsTable=document.getElementById('sparkyResultsTableId');             sparkyResultsTable=document.getElementById('sparkyResultsTableId');
+        yearResultsTable  =document.getElementById('yearResultsTableId');               yearResultsTable  =document.getElementById('yearResultsTableId');
+        wilburResultsTable=document.getElementById('wilburResultsTableId');             wilburResultsTable=document.getElementById('wilburResultsTableId');
+
+        console.log(sparkyResultsTable);                                                console.log(sparkyResultsTable);
+}                                                                               }
+
+function clearInputs(form) {                                                    function clearInputs(form) {
+        var formElements = form.elements;                                               var formElements = form.elements;
+        for (var i=0; i&lt; formElements.length; i++)                                      for (var i=0; i&lt; formElements.length; i++)
+                formElements[i].value=&quot;&quot;;                                                       formElements[i].value=&quot;&quot;;
+}                                                                               }
+
+function loadDefaults(form) {                                                   function loadDefaults(form) {
+        form.reset();                                                                   form.reset();
+}                                                                               }
+
+<span style="color:teal;">function runComparison(form) {                                                | function getNumValue(id) {</span>
+<span style="color:teal;">        alert(&quot;function runComparison() is running&quot;);                         |         return Number(document.getElementById(id).value);</span>
+<span style="color:red;">        console.log(form);                                                    &lt;</span>
+}                                                                               }
+<span style="color:green;">                                                                              &gt;</span>
+<span style="color:green;">                                                                              &gt; function runComparison(form) {</span>
+<span style="color:green;">                                                                              &gt;         if (!form.checkValidity()) {</span>
+<span style="color:green;">                                                                              &gt;                 alert(&quot;See highlighted input boxes, there are input errors&quot;);</span>
+<span style="color:green;">                                                                              &gt;         } else {</span>
+<span style="color:green;">                                                                              &gt;                 sparkyAnnualSavings   = getNumValue('sparkyAnnualSavingsId');</span>
+<span style="color:green;">                                                                              &gt;                 sparkyInterestRate        = getNumValue('sparkyInterestRateId</span>
+<span style="color:green;">                                                                              &gt;                 sparkyCompoundingYears= getNumValue('sparkyCompoundingYearsId</span>
+<span style="color:green;">                                                                              &gt;                 sparkyStartYear           = getNumValue('sparkyStartYearId');</span>
+<span style="color:green;">                                                                              &gt;                 sparkyStopYear            = getNumValue('sparkyStopYearId');</span>
+<span style="color:green;">                                                                              &gt;</span>
+<span style="color:green;">                                                                              &gt;                 // fill in Wilbur's values</span>
+<span style="color:green;">                                                                              &gt;                 </span>
+<span style="color:green;">                                                                              &gt;                 console.log(&quot;*** Sparky's input values ***&quot;)</span>
+<span style="color:green;">                                                                              &gt;                 console.log(&quot;sparkyAnnualSavings   :&quot;, sparkyAnnualSavings);</span>
+<span style="color:green;">                                                                              &gt;                 console.log(&quot;sparkyInterestRate    :&quot;, sparkyInterestRate);</span>
+<span style="color:green;">                                                                              &gt;                 console.log(&quot;sparkyCompoundingYears:&quot;, sparkyCompoundingYears</span>
+<span style="color:green;">                                                                              &gt;                 console.log(&quot;sparkyStartYear       :&quot;, sparkyStartYear);</span>
+<span style="color:green;">                                                                              &gt;                 console.log(&quot;sparkyStopYear        :&quot;, sparkyStopYear);</span>
+<span style="color:green;">                                                                              &gt;</span>
+<span style="color:green;">                                                                              &gt;                 console.log(&quot;&quot;);</span>
+<span style="color:green;">                                                                              &gt;                 </span>
+<span style="color:green;">                                                                              &gt;                 console.log(&quot;*** Wilbur's input values ***&quot;)</span>
+<span style="color:green;">                                                                              &gt;                 // fill in Wilbur's console.log()</span>
+<span style="color:green;">                                                                              &gt;         } // end of else</span>
+<span style="color:green;">                                                                              &gt; } // end of runComparison()</span>
+</pre>
+</body>
+</html>
